@@ -19,7 +19,7 @@ class MockDolphin: Mock, Dolphin {
 	}
 
 	func jump(numberOfTimes: Int) -> String {
-		stub(args: [numberOfTimes])
+		return stub(args: [numberOfTimes])
 	}
 
 	func swim() {
