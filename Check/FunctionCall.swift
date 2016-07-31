@@ -25,7 +25,7 @@ extension FunctionCall {
      
      - returns: Whether that argument was used in this `FunctionCall`
      */
-    func verifyArgument<T: Equatable>(argument: T) -> Bool {
+    func checkArgument<T: Equatable>(argument: T) -> Bool {
         guard let args = args else { return false }
         return args.contains {
             guard let typed = $0 as? T else { return false }

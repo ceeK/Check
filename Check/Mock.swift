@@ -65,7 +65,7 @@ extension Mock {
      
      - returns: Whether the function was called.
      */
-    func verifyMethodCall(named name: String, occurances: Int = 1) -> Bool {
+    func checkMethodCall(named name: String, occurances: Int = 1) -> Bool {
         return calls.filter { $0.name == name }.count == occurances
     }
     
@@ -77,9 +77,9 @@ extension Mock {
      
      - returns: Whether the argument occured in the function call.
      */
-    func verifyArguments<T: Equatable>(method method: String, argument: T) -> Bool {
+    func checkArguments<T: Equatable>(method method: String, argument: T) -> Bool {
         guard let function = calls.filter({ $0.name == method }).first else { return false }
-        return function.verifyArgument(argument)
+        return function.checkArgument(argument)
     }
     
 }
