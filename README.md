@@ -133,7 +133,7 @@ Add the `ceek/Check` project to your [Cartfile](https://github.com/Carthage/Cart
 github "ceeK/Check"
 ```
 
-Then run `carthage update --platform iOS`
+Then run `carthage update`
 
 ## License
 The MIT License (MIT)
