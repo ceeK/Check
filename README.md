@@ -9,7 +9,7 @@ Check has been designed to work when using protocols to inject dependencies.
 
 ## Creating a mock
 
-You can create a mock by subclassing `Mock`, conforming to a protocol, and implementing either `stub()` or `spy()` in your function implementations.
+You can create a mock by subclassing `Mock`, conforming to the protocol you want to mock, and implementing either `stub()` or `spy()` in your function implementations.
 
 ```swift
 class MockDolphin: Mock, Dolphin {
@@ -18,7 +18,7 @@ class MockDolphin: Mock, Dolphin {
 		return stub()
 	}
 
-	func jump(numberOfTimes: Int) {
+	func jump(numberOfTimes: Int) -> String {
 		stub(args: [numberOfTimes])
 	}
 
